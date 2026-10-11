@@ -1,0 +1,20 @@
+# MCP server. Pinned below 2.0 because version 2 renamed FastMCP to MCPServer.
+mcp>=1.9,<2
+
+# Web server
+fastapi
+uvicorn
+
+# Download videos (Instagram, YouTube, TikTok, ...)
+yt-dlp
+
+# Speech -> text
+faster-whisper
+
+# On-screen text (OCR). It needs PyTorch; the Dockerfile installs a small
+# CPU-only PyTorch first, so pip will not download the huge GPU version.
+easyocr
+
+# Fuzzy text comparison for removing duplicate OCR lines
+thefuzz
+
